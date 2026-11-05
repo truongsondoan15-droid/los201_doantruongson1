@@ -1,0 +1,7 @@
+make -C /home/doantruongson/embedded_lab1/kernel/linux-5.15 ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- M=/home/doantruongson/embedded_lab1/rootfs/LOS201_Lab/los201_doantruongson1/ASGN2/driver modules
+make -f ./scripts/Makefile.build obj=/home/doantruongson/embedded_lab1/rootfs/LOS201_Lab/los201_doantruongson1/ASGN2/driver \
+single-build= \
+need-builtin=1 need-modorder=1
+sh ./scripts/modules-check.sh /home/doantruongson/embedded_lab1/rootfs/LOS201_Lab/los201_doantruongson1/ASGN2/driver/modules.order
+make -f ./scripts/Makefile.modpost
+make -f ./scripts/Makefile.modfinal

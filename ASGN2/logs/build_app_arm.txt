@@ -1,0 +1,2 @@
+mkdir -p bin
+arm-linux-gnueabihf-gcc -D_GNU_SOURCE -Iinclude -I../driver -std=c11 -O2 -g -Wall -Wextra -Werror -pthread -mcpu=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard -static src/sms_app.c src/sensor_thread.c src/processor_thread.c src/alert_thread.c src/logger_thread.c src/circular_buffer.c -o bin/sms_app_arm -pthread -lrt -lm
