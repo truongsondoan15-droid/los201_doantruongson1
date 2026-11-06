@@ -1,0 +1,16 @@
+# started on Fri Nov  6 16:47:28 2026
+
+
+ Performance counter stats for '/home/doantruongson/embedded_lab3/apps/buggy_app_host':
+
+              0.54 msec task-clock                                                            
+                 0      context-switches                                                      
+                 0      cpu-migrations                                                        
+                62      page-faults                                                           
+
+       0.001689928 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001449000 seconds sys
+
+

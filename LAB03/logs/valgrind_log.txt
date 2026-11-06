@@ -1,0 +1,121 @@
+==9723== Memcheck, a memory error detector
+==9723== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==9723== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==9723== Command: /home/doantruongson/Lab3/app/buggy_app_host
+==9723== 
+==9723== Use of uninitialised value of size 8
+==9723==    at 0x48DB062: _itoa_word (_fitoa_word.c:38)
+==9723==    by 0x48E661C: __printf_buffer (vfprintf-process-arg.c:155)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001269: process_data (buggy_app.c:14)
+==9723==    by 0x4001363: main (buggy_app.c:49)
+==9723==  Uninitialised value was created by a stack allocation
+==9723==    at 0x4001306: main (buggy_app.c:44)
+==9723== 
+==9723== Conditional jump or move depends on uninitialised value(s)
+==9723==    at 0x48DB069: _itoa_word (_fitoa_word.c:38)
+==9723==    by 0x48E661C: __printf_buffer (vfprintf-process-arg.c:155)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001269: process_data (buggy_app.c:14)
+==9723==    by 0x4001363: main (buggy_app.c:49)
+==9723==  Uninitialised value was created by a stack allocation
+==9723==    at 0x4001306: main (buggy_app.c:44)
+==9723== 
+==9723== Conditional jump or move depends on uninitialised value(s)
+==9723==    at 0x48E6FAA: __printf_buffer (vfprintf-process-arg.c:186)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001269: process_data (buggy_app.c:14)
+==9723==    by 0x4001363: main (buggy_app.c:49)
+==9723==  Uninitialised value was created by a stack allocation
+==9723==    at 0x4001306: main (buggy_app.c:44)
+==9723== 
+==9723== Conditional jump or move depends on uninitialised value(s)
+==9723==    at 0x48E72C8: __printf_buffer (vfprintf-process-arg.c:208)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001269: process_data (buggy_app.c:14)
+==9723==    by 0x4001363: main (buggy_app.c:49)
+==9723==  Uninitialised value was created by a stack allocation
+==9723==    at 0x4001306: main (buggy_app.c:44)
+==9723== 
+==9723== Invalid read of size 1
+==9723==    at 0x485A166: strlen (vg_replace_strmem.c:506)
+==9723==    by 0x48E7947: __printf_buffer (vfprintf-process-arg.c:443)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001398: main (buggy_app.c:54)
+==9723==  Address 0x4a9d080 is 0 bytes inside a block of size 21 free'd
+==9723==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==9723==    by 0x40012C5: create_message (buggy_app.c:28)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723==  Block was alloc'd at
+==9723==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==9723==    by 0x4001294: create_message (buggy_app.c:19)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723== 
+==9723== Invalid read of size 1
+==9723==    at 0x485A174: strlen (vg_replace_strmem.c:506)
+==9723==    by 0x48E7947: __printf_buffer (vfprintf-process-arg.c:443)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001398: main (buggy_app.c:54)
+==9723==  Address 0x4a9d081 is 1 bytes inside a block of size 21 free'd
+==9723==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==9723==    by 0x40012C5: create_message (buggy_app.c:28)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723==  Block was alloc'd at
+==9723==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==9723==    by 0x4001294: create_message (buggy_app.c:19)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723== 
+==9723== Invalid read of size 8
+==9723==    at 0x485ECA1: memmove (vg_replace_strmem.c:1415)
+==9723==    by 0x48DCD67: memcpy (string_fortified.h:29)
+==9723==    by 0x48DCD67: __printf_buffer_write (Xprintf_buffer_write.c:39)
+==9723==    by 0x48E5F9D: __printf_buffer (vfprintf-process-arg.c:471)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001398: main (buggy_app.c:54)
+==9723==  Address 0x4a9d080 is 0 bytes inside a block of size 21 free'd
+==9723==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==9723==    by 0x40012C5: create_message (buggy_app.c:28)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723==  Block was alloc'd at
+==9723==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==9723==    by 0x4001294: create_message (buggy_app.c:19)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723== 
+==9723== Invalid read of size 2
+==9723==    at 0x485EB80: memmove (vg_replace_strmem.c:1415)
+==9723==    by 0x48DCD67: memcpy (string_fortified.h:29)
+==9723==    by 0x48DCD67: __printf_buffer_write (Xprintf_buffer_write.c:39)
+==9723==    by 0x48E5F9D: __printf_buffer (vfprintf-process-arg.c:471)
+==9723==    by 0x48E8767: __vfprintf_internal (vfprintf-internal.c:1548)
+==9723==    by 0x48DC132: printf (printf.c:33)
+==9723==    by 0x4001398: main (buggy_app.c:54)
+==9723==  Address 0x4a9d090 is 16 bytes inside a block of size 21 free'd
+==9723==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==9723==    by 0x40012C5: create_message (buggy_app.c:28)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723==  Block was alloc'd at
+==9723==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==9723==    by 0x4001294: create_message (buggy_app.c:19)
+==9723==    by 0x4001372: main (buggy_app.c:51)
+==9723== 
+Starting buggy application...
+Sum = 15
+Message: Hello Embedded Linux
+Result = 1410065408
+Application finished.
+==9723== 
+==9723== HEAP SUMMARY:
+==9723==     in use at exit: 0 bytes in 0 blocks
+==9723==   total heap usage: 2 allocs, 2 frees, 4,117 bytes allocated
+==9723== 
+==9723== All heap blocks were freed -- no leaks are possible
+==9723== 
+==9723== For lists of detected and suppressed errors, rerun with: -s
+==9723== ERROR SUMMARY: 31 errors from 8 contexts (suppressed: 0 from 0)
